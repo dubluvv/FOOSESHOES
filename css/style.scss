@@ -1,3 +1,119 @@
+@font-face {
+  font-family: MyFont;
+  src: url(STHeitiSC.ttf);
+}
+@font-face {
+  font-family: Aller;
+  src: url(Aller_Rg.ttf);
+}
+$logo-color: #57c5a0;
+$back-black: #242424;
+$top-font-color: #b1aeae;
 body {
-	ul {border:0;}
+	font-family: MyFont, serif;
+}
+header {
+	height: 44px;
+	background-color: $back-black;
+	div {
+		position: relative;
+		width: 960px;
+		min-width: 960px;
+		margin: 0 auto;
+		display: block;
+		a[href="index.html"] {
+			text-transform: uppercase;
+			color: $logo-color;
+			text-decoration: none;
+			font-size: 26pt;
+			float: left;
+		}
+		p, input {
+			float: right;
+		}
+		input {
+			text-indent: 18px;
+			width: 171px;
+			height: 44px;
+			color: $top-font-color;
+			text-transform: uppercase;
+			font-family: Myriad Pro, serif;
+			font-size: 12pt;
+			border: 1px $top-font-color solid;
+			border-width: 0 1px;
+			letter-spacing: 2px;
+			background: url('../images/search-icon.png') 171px-18px*2 /* width(171) - padding_left + padding_right(18+18) */ 12px scroll no-repeat $back-black;
+		}
+		p {
+			color: $top-font-color;
+			padding: 11px 22px;
+			margin: 0;
+			border-right: 1px $top-font-color solid;
+			a {
+				color: $top-font-color;
+				text-transform: uppercase;
+				text-decoration: none;
+				&:hover {
+					color: $logo-color;
+				}
+			}
+		}
+	}
+}
+nav {
+	height: 60px;
+	width: 960px;
+	min-width: 960px;
+	margin: 0 auto;
+	display: block;
+	position: relative;
+	a {
+		color: #000;
+		float: left;
+		width: auto;
+		padding: 20px;
+		text-transform: capitalize;
+		text-decoration: none;
+		border-left: 1px #eee solid;
+		font-family: Aller, serif;
+		&:hover {
+			color: $logo-color;
+		}
+		&:last-of-type {
+			border-right: 1px #eee solid;
+		}
+	}
+	p {
+		cursor: pointer;
+		float: right;
+		display: block;
+		width: 90px;
+		height: 20px;
+		margin: 0;
+		text-align: center;
+		padding: 20px 0;
+		border-left: 1px #ccc solid;
+		font-size: smaller;
+		&:first-of-type {
+			border-right: 1px #ccc solid;
+			background: url('../images/cart-icon.png') 22px 26px scroll no-repeat;
+		}
+		&:last-of-type {
+			background: url('../images/wishlist-icon.png') 22px 26px scroll no-repeat;
+		}
+		&:hover span {
+			background-color: $logo-color;
+		}
+		span {
+			padding: 5px;
+			display: block;
+			width: 14px;
+			height: 14px;
+			border-radius: 3px;
+			background-color: #adadad;
+			margin-left: 46px;
+			font-weight: bold;
+			color: #fff;
+		}
+	}
 }

@@ -1,4 +1,100 @@
-body ul {
-  border: 0; }
+@font-face {
+  font-family: MyFont;
+  src: url(STHeitiSC.ttf); }
+@font-face {
+  font-family: Aller;
+  src: url(Aller_Rg.ttf); }
+body {
+  font-family: MyFont, serif; }
+
+header {
+  height: 44px;
+  background-color: #242424; }
+  header div {
+    position: relative;
+    width: 960px;
+    min-width: 960px;
+    margin: 0 auto;
+    display: block; }
+    header div a[href="index.html"] {
+      text-transform: uppercase;
+      color: #57c5a0;
+      text-decoration: none;
+      font-size: 26pt;
+      float: left; }
+    header div p, header div input {
+      float: right; }
+    header div input {
+      text-indent: 18px;
+      width: 171px;
+      height: 44px;
+      color: #b1aeae;
+      text-transform: uppercase;
+      font-family: Myriad Pro, serif;
+      font-size: 12pt;
+      border: 1px #b1aeae solid;
+      border-width: 0 1px;
+      letter-spacing: 2px;
+      background: url("../images/search-icon.png") 135px 12px scroll no-repeat #242424; }
+    header div p {
+      color: #b1aeae;
+      padding: 11px 22px;
+      margin: 0;
+      border-right: 1px #b1aeae solid; }
+      header div p a {
+        color: #b1aeae;
+        text-transform: uppercase;
+        text-decoration: none; }
+        header div p a:hover {
+          color: #57c5a0; }
+
+nav {
+  height: 60px;
+  width: 960px;
+  min-width: 960px;
+  margin: 0 auto;
+  display: block;
+  position: relative; }
+  nav a {
+    color: #000;
+    float: left;
+    width: auto;
+    padding: 20px;
+    text-transform: capitalize;
+    text-decoration: none;
+    border-left: 1px #eee solid;
+    font-family: Aller, serif; }
+    nav a:hover {
+      color: #57c5a0; }
+    nav a:last-of-type {
+      border-right: 1px #eee solid; }
+  nav p {
+    cursor: pointer;
+    float: right;
+    display: block;
+    width: 90px;
+    height: 20px;
+    margin: 0;
+    text-align: center;
+    padding: 20px 0;
+    border-left: 1px #ccc solid;
+    font-size: smaller; }
+    nav p:first-of-type {
+      border-right: 1px #ccc solid;
+      background: url("../images/cart-icon.png") 22px 26px scroll no-repeat; }
+    nav p:last-of-type {
+      background: url("../images/wishlist-icon.png") 22px 26px scroll no-repeat; }
+    nav p:hover span {
+      background-color: #57c5a0; }
+    nav p span {
+      padding: 5px;
+      display: block;
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      background-color: #adadad;
+      margin-left: 46px;
+      font-weight: bold;
+      color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
