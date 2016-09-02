@@ -53,8 +53,7 @@ nav {
   width: 960px;
   min-width: 960px;
   margin: 0 auto;
-  display: block;
-  position: relative; }
+  display: block; }
   nav a {
     color: #000;
     float: left;
@@ -83,7 +82,7 @@ nav {
       border-right: 1px #ccc solid;
       background: url("../images/cart-icon.png") 22px 26px scroll no-repeat; }
     nav p:last-of-type {
-      background: url("../images/wishlist-icon.png") 22px 26px scroll no-repeat; }
+      background: url("../images/wishlist-icon-off.png") 22px 26px scroll no-repeat; }
     nav p:hover span {
       background-color: #57c5a0; }
     nav p span {
@@ -95,6 +94,76 @@ nav {
       background-color: #adadad;
       margin-left: 46px;
       font-weight: bold;
-      color: #fff; }
+      color: #fff;
+      font-family: Aller; }
+
+banner {
+  background: url("../images/img-bg.jpg") 0 0 scroll no-repeat;
+  display: block;
+  height: 460px; }
+  banner > div:first-child {
+    height: 460px;
+    width: 960px;
+    min-width: 960px;
+    margin: 0 auto;
+    display: block;
+    position: relative; }
+    banner > div:first-child content {
+      position: absolute;
+      left: 520px;
+      top: 70px; }
+      banner > div:first-child content > * {
+        margin: 8px 0; }
+      banner > div:first-child content #price {
+        display: block;
+        width: 66px;
+        background-color: #57c5a0;
+        text-align: center;
+        font-weight: bold;
+        color: #fff;
+        font-family: Aller;
+        font-size: 9pt;
+        padding: 26px 0; }
+        banner > div:first-child content #price:before {
+          content: '$'; }
+      banner > div:first-child content p:last-of-type {
+        text-transform: capitalize;
+        font-size: 20px;
+        padding-right: 5px; }
+      banner > div:first-child content ul {
+        padding: 0; }
+        banner > div:first-child content ul li {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          background-color: #fff; }
+          banner > div:first-child content ul li:hover {
+            cursor: pointer; }
+          banner > div:first-child content ul li span {
+            display: block;
+            width: 40px;
+            height: 40px; }
+          banner > div:first-child content ul li:first-child span {
+            background: url("../images/eye-icon-off.png") 12px 14px scroll no-repeat; }
+            banner > div:first-child content ul li:first-child span:hover {
+              background-image: url("../images/eye-icon-on.png"); }
+          banner > div:first-child content ul li:nth-child(2) span {
+            background: url("../images/wishlist-icon-off.png") 11px 12px scroll no-repeat; }
+            banner > div:first-child content ul li:nth-child(2) span:hover {
+              background-image: url("../images/wishlist-icon-on.png"); }
+          banner > div:first-child content ul li:nth-child(3) span {
+            background: url("../images/share-icon-off.png") 12px 13px scroll no-repeat; }
+            banner > div:first-child content ul li:nth-child(3) span:hover {
+              background-image: url("../images/share-icon-on.png"); }
+          banner > div:first-child content ul li:last-child span {
+            background: url("../images/buy-icon-off.png") 10px 12px scroll no-repeat; }
+            banner > div:first-child content ul li:last-child span:hover {
+              background-image: url("../images/buy-icon-on.png"); }
+
+controllers .controllers {
+  width: 600px;
+  height: 90px; }
+  controllers .controllers > div {
+    width: 200px; }
 
 /*# sourceMappingURL=style.css.map */

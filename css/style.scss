@@ -66,7 +66,6 @@ nav {
 	min-width: 960px;
 	margin: 0 auto;
 	display: block;
-	position: relative;
 	a {
 		color: #000;
 		float: left;
@@ -99,7 +98,7 @@ nav {
 			background: url('../images/cart-icon.png') 22px 26px scroll no-repeat;
 		}
 		&:last-of-type {
-			background: url('../images/wishlist-icon.png') 22px 26px scroll no-repeat;
+			background: url('../images/wishlist-icon-off.png') 22px 26px scroll no-repeat;
 		}
 		&:hover span {
 			background-color: $logo-color;
@@ -114,6 +113,100 @@ nav {
 			margin-left: 46px;
 			font-weight: bold;
 			color: #fff;
+			font-family: Aller;
+		}
+	}
+}
+banner {
+	background: url('../images/img-bg.jpg') 0 0 scroll no-repeat;
+	display: block;
+	height: 460px;
+	& > div:first-child {
+		height: 460px;
+		width: 960px;
+		min-width: 960px;
+		margin: 0 auto;
+		display: block;
+		position: relative;
+		content {
+			& > * {
+				margin: 8px 0;
+			}
+			position: absolute;
+			left: 520px;
+			top: 70px;
+			#price {
+				display: block;
+				width: 66px;
+				background-color: $logo-color;
+				text-align: center;
+				font-weight: bold;
+				color: #fff;
+				font-family: Aller;
+				font-size: 9pt;
+				padding: 26px 0;
+				&:before {
+					content:'$';
+				}
+			}
+			p:last-of-type {
+				text-transform: capitalize;
+		    font-size: 20px;
+    		padding-right: 5px;
+			}
+			ul {
+				padding: 0;
+				li {
+					display: inline-block;
+					width: 40px;
+					height: 40px;
+					background-color: #fff;
+					&:hover {
+						cursor: pointer;
+					}
+					span {
+						display: block;
+						width: 40px;
+						height: 40px;
+					}
+					&:first-child span {
+						background: url('../images/eye-icon-off.png') 12px 14px scroll no-repeat;
+						&:hover {
+							background-image: url('../images/eye-icon-on.png');
+						}
+					}
+					&:nth-child(2) span {
+						background: url('../images/wishlist-icon-off.png') 11px 12px scroll no-repeat;
+						&:hover {
+							background-image: url('../images/wishlist-icon-on.png');
+						}
+					}
+					&:nth-child(3) span {
+						background: url('../images/share-icon-off.png') 12px 13px scroll no-repeat;
+						&:hover {
+							background-image: url('../images/share-icon-on.png');
+						}
+					}
+					&:last-child span {
+						background: url('../images/buy-icon-off.png') 10px 12px scroll no-repeat;
+						&:hover {
+							background-image: url('../images/buy-icon-on.png');
+						}
+					}
+				}
+			}
+		}
+	}
+}
+controllers {
+	.controllers {
+		width: 600px;
+		height: 90px;
+		.slider {
+
+		}
+		& > div {
+			width: 200px;
 		}
 	}
 }
