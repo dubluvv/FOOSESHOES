@@ -160,10 +160,98 @@ banner {
             banner > div:first-child content ul li:last-child span:hover {
               background-image: url("../images/buy-icon-on.png"); }
 
-controllers .controllers {
-  width: 600px;
-  height: 90px; }
-  controllers .controllers > div {
-    width: 200px; }
+controllers {
+  background-color: #2e2e2e;
+  height: 90px;
+  display: block;
+  padding-top: 6px; }
+  controllers .controllers {
+    width: 600px;
+    margin: 0 auto;
+    height: 90px; }
+    controllers .controllers > div {
+      cursor: pointer;
+      width: 190px;
+      display: inline-block;
+      margin-right: -4px; }
+      controllers .controllers > div:nth-child(2) {
+        margin-left: 6px; }
+      controllers .controllers > div > * {
+        text-align: center;
+        color: #acacac;
+        margin-bottom: 0;
+        padding: 0;
+        font-family: Aller;
+        font-weight: normal; }
+      controllers .controllers > div > p {
+        margin-top: 0;
+        color: #787878; }
+      controllers .controllers > div.active h3, controllers .controllers > div:hover h3 {
+        color: #fff; }
+      controllers .controllers > div.active p, controllers .controllers > div:hover p {
+        color: #adadad; }
+    controllers .controllers .slider {
+      display: block;
+      width: 570px;
+      height: 8px;
+      background-color: #000;
+      position: relative;
+      padding: 2px 6px; }
+      controllers .controllers .slider hr {
+        display: block;
+        width: 184px;
+        /* .slider width / 3 - .slider padding-top - span padding-left/right */
+        background-color: #57c5a0;
+        height: 8px;
+        /* .slider height - .slider padding-top */
+        margin: 0;
+        padding: 0;
+        border: 0; }
+      controllers .controllers .slider span {
+        display: block;
+        width: 2px;
+        height: 8px;
+        background-color: #2e2e2e;
+        position: absolute;
+        top: 2px; }
+        controllers .controllers .slider span:first-of-type {
+          left: 194px; }
+        controllers .controllers .slider span:last-child {
+          left: 386px;
+          /* .slider padding-left + hr width *2 + first span */ }
+
+specials {
+  background-color: #242424;
+  height: 205px;
+  display: block;
+  padding-top: 25px; }
+  specials .specials {
+    width: 960px;
+    min-width: 960px;
+    margin: 0 auto;
+    height: 230px; }
+    specials .specials div {
+      max-height: 180px;
+      max-width: 300px;
+      display: inline-block;
+      margin-right: 16px;
+      padding: 60px;
+      background: url("../images/special2.jpg") 0 0 scroll no-repeat; }
+      specials .specials div:first-child {
+        background: url("../images/special1.jpg") 0 0 scroll no-repeat; }
+      specials .specials div:last-child {
+        margin-right: 0;
+        background: url("../images/special3.jpg") 0 0 scroll no-repeat; }
+      specials .specials div p {
+        margin: 0;
+        display: block;
+        width: 180px;
+        height: 40px;
+        text-align: center;
+        font: Aller 22px normal;
+        padding-top: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        text-transform: uppercase;
+        color: #fff; }
 
 /*# sourceMappingURL=style.css.map */

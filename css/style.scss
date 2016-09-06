@@ -8,6 +8,7 @@
 }
 $logo-color: #57c5a0;
 $back-black: #242424;
+$slider-black: #2e2e2e;
 $top-font-color: #b1aeae;
 body {
 	font-family: MyFont, serif;
@@ -129,12 +130,12 @@ banner {
 		display: block;
 		position: relative;
 		content {
-			& > * {
-				margin: 8px 0;
-			}
 			position: absolute;
 			left: 520px;
 			top: 70px;
+			& > * {
+				margin: 8px 0;
+			}
 			#price {
 				display: block;
 				width: 66px;
@@ -199,14 +200,111 @@ banner {
 	}
 }
 controllers {
+	background-color: $slider-black;
+	height: 90px;
+	display: block;
+	padding-top: 6px;
 	.controllers {
 		width: 600px;
+		margin: 0 auto;
 		height: 90px;
-		.slider {
-
-		}
 		& > div {
-			width: 200px;
+			cursor: pointer;
+			width: 190px;
+			display: inline-block;
+			margin-right: -4px;
+			&:nth-child(2) {
+				margin-left: 6px;
+			}
+			& > * {
+				text-align: center;
+				color: #acacac;
+				margin-bottom: 0;
+				padding: 0;
+				font-family: Aller;
+				font-weight: normal;
+			}
+			& > p {
+				margin-top: 0;
+				color: #787878;
+			}
+			&.active, &:hover {
+				h3 {color: #fff;}
+				p {color: #adadad;}
+			}
+		}
+		.slider {
+			display: block;
+			width: 570px;
+			height: 8px;
+			background-color: #000;
+			position: relative;
+			padding: 2px 6px;
+			hr {
+				display: block;
+				width: 570px/3-2px-4px;
+				/* .slider width / 3 - .slider padding-top - span padding-left/right */
+				background-color: $logo-color;
+				height: 10px-2px;
+				/* .slider height - .slider padding-top */
+				margin: 0;
+				padding: 0;
+				border: 0;
+			}
+			span {
+				display: block;
+				width: 2px;
+				height: 8px;
+				background-color: $slider-black;
+				position: absolute;
+				top: 2px;
+				&:first-of-type{
+					left: 194px;
+				}
+				&:last-child {
+					left: 4px+190px*2+2px;
+					/* .slider padding-left + hr width *2 + first span */
+				}
+			}
+		}
+	}
+}
+specials {
+	background-color: $back-black;
+	height: 230px-25px;
+	display: block;
+	padding-top: 25px;
+	.specials {
+		width: 960px;
+		min-width: 960px;
+		margin: 0 auto;
+		height: 230px;
+		div {
+			max-height: 180px;
+			max-width: 300px;
+			display: inline-block;
+			margin-right: 20px-4px;
+			padding: 60px;
+			background: url('../images/special2.jpg') 0 0 scroll no-repeat;
+			&:first-child {
+				background: url('../images/special1.jpg') 0 0 scroll no-repeat;
+			}
+			&:last-child {
+				margin-right: 0;
+				background: url('../images/special3.jpg') 0 0 scroll no-repeat;
+			}
+			p {
+				margin: 0;
+				display: block;
+				width: 180px;
+				height: 60px-20px;
+				text-align: center;
+				font: Aller 22px normal;
+				padding-top: 20px;
+				background-color: rgba(0,0,0,.8);
+				text-transform: uppercase;
+				color: #fff;
+			}
 		}
 	}
 }
