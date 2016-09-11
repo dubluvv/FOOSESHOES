@@ -155,46 +155,46 @@ banner {
 		    font-size: 20px;
     		padding-right: 5px;
 			}
-			ul {
-				padding: 0;
-				li {
-					display: inline-block;
-					width: 40px;
-					height: 40px;
-					background-color: #fff;
-					&:hover {
-						cursor: pointer;
-					}
-					span {
-						display: block;
-						width: 40px;
-						height: 40px;
-					}
-					&:first-child span {
-						background: url('../images/eye-icon-off.png') 12px 14px scroll no-repeat;
-						&:hover {
-							background-image: url('../images/eye-icon-on.png');
-						}
-					}
-					&:nth-child(2) span {
-						background: url('../images/wishlist-icon-off.png') 11px 12px scroll no-repeat;
-						&:hover {
-							background-image: url('../images/wishlist-icon-on.png');
-						}
-					}
-					&:nth-child(3) span {
-						background: url('../images/share-icon-off.png') 12px 13px scroll no-repeat;
-						&:hover {
-							background-image: url('../images/share-icon-on.png');
-						}
-					}
-					&:last-child span {
-						background: url('../images/buy-icon-off.png') 10px 12px scroll no-repeat;
-						&:hover {
-							background-image: url('../images/buy-icon-on.png');
-						}
-					}
-				}
+		}
+	}
+}
+ul.links {
+	padding: 0;
+	li {
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		background-color: #fff;
+		&:hover {
+			cursor: pointer;
+		}
+		span {
+			display: block;
+			width: 40px;
+			height: 40px;
+		}
+		&:first-child span {
+			background: url('../images/eye-icon-off.png') 12px 14px scroll no-repeat;
+			&:hover {
+				background-image: url('../images/eye-icon-on.png');
+			}
+		}
+		&:nth-child(2) span {
+			background: url('../images/wishlist-icon-off.png') 11px 12px scroll no-repeat;
+			&:hover {
+				background-image: url('../images/wishlist-icon-on.png');
+			}
+		}
+		&:nth-child(3) span {
+			background: url('../images/share-icon-off.png') 12px 13px scroll no-repeat;
+			&:hover {
+				background-image: url('../images/share-icon-on.png');
+			}
+		}
+		&:last-child span {
+			background: url('../images/buy-icon-off.png') 10px 12px scroll no-repeat;
+			&:hover {
+				background-image: url('../images/buy-icon-on.png');
 			}
 		}
 	}
@@ -280,6 +280,7 @@ specials {
 		margin: 0 auto;
 		height: 230px;
 		div {
+			cursor: pointer;
 			max-height: 180px;
 			max-width: 300px;
 			display: inline-block;
@@ -304,6 +305,181 @@ specials {
 				background-color: rgba(0,0,0,.8);
 				text-transform: uppercase;
 				color: #fff;
+			}
+		}
+	}
+}
+arrivals {
+	background-color: #ebe7df;
+	height: 1000px;
+	display: block;
+	padding-top: 25px;
+	.arrivals {
+		width: 960px;
+		min-width: 960px;
+		margin: 0 auto;
+		height: 230px;
+		h2 {
+			font-family: Aller;
+			font-weight: normal;
+			text-transform: capitalize;
+			margin: 0;
+			display: inline-block;
+			width: 90%;
+			padding-bottom: 10px;
+		}
+		a {
+			font-family: Aller;
+			float: right;
+			color: #bcb5a7;
+			border: 1px #bcb5a7 solid;
+			text-transform: none;
+			text-decoration: none;
+			padding: 6px;
+			&:hover {
+				color: $logo-color;
+				border-color: $logo-color;
+			}
+		}
+		.item {
+			position: relative;
+			display: inline-block;
+			width: 300px;
+			height: 270px;
+			background-color: #fff;
+			margin: 15px 0 35px 25px;
+			&:first-of-type {
+				background: url('../images/shoe1.jpg') 0 0 scroll no-repeat;
+			}
+			&:nth-of-type(2) {
+				background: url('../images/shoe2.jpg') 0 0 scroll no-repeat;
+			}
+			&:nth-of-type(3) {
+				background: url('../images/shoe3.jpg') 0 0 scroll no-repeat;
+			}
+			&:nth-of-type(4) {
+				background: url('../images/shoe4.jpg') 0 0 scroll no-repeat;
+			}
+			&:nth-of-type(5) {
+				background: url('../images/shoe5.jpg') 0 0 scroll no-repeat;
+			}
+			&:nth-of-type(6) {
+				background: url('../images/shoe6.jpg') 0 0 scroll no-repeat;
+			}
+			&:first-of-type, &:nth-of-type(4) {
+				margin-left: 0;
+			}
+			#on-sale, #out-of-stock {
+				position: absolute;
+				display: block;
+				width: 65px;
+				height: 65px-20px;
+				background-color: #000;
+				color: #fff;
+				top: 0;
+				right: 15px;
+				margin: 0;
+				text-transform: uppercase;
+				text-align: center;
+				font-family: Aller;
+				font-size: 13px;
+				padding-top: 20px;
+				display: none;
+			}
+			#out-of-stock {
+				background-color: #f27e4b;
+			}
+			&:nth-of-type(2) #on-sale, &:nth-of-type(6) #out-of-stock {
+				display: block;
+			}
+			div {
+				position: absolute;
+				display: block;
+				height: 50px;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				border-top: 1px #ccc solid;
+				background-color: #fff;
+				p:first-child {
+					display: block;
+					width: 70px;
+					height: 45px;
+					background-color: $logo-color;
+					color: #fff;
+					margin: -20px 0 0 12px;
+					text-align: center;
+					float: left;
+					font-family: Aller;
+					padding-top: 25px;
+				}
+				p:last-of-type {
+					float: left;
+					margin: 0;
+					font-family: Aller;
+					font-weight: normal;
+					font-size: x-large;
+					padding: 10px 0 0 10px;
+					cursor: pointer;
+			    display: block;
+			    width: 208px;
+			    height: 40px;
+				}
+				.links {
+					position: absolute;
+					right: 0;
+					bottom: 0;
+					margin: 0;
+					height: 40px;
+					width: 181px;
+					display: none;
+					background-color: #fff;
+					cursor: pointer;
+					overflow: hidden;
+					padding: 5px 18px;
+				}
+			}
+		}
+		#free-shipping, #testimonials, #blog-news {
+			padding: 17px;
+			display: inline-block;
+			width: 200px;
+			min-height: 200px;
+			margin: 0 16px 0 0;
+			background-color: #dfdbd4;
+			h3 {
+				text-transform: uppercase;
+				font-family: Aller;
+				margin-top: 0;
+			}
+			p {
+				font-size: small;
+			}
+		}
+		#blog-news {
+			width: 417px;
+			margin: 0 0 5px 0;
+			.blog-post {
+				h4 {
+					margin: 0;
+				}
+				p:first-of-type {
+					margin: 0 10px 12px 0;
+					display: block;
+					background-color: $logo-color;
+					font-family: Aller;
+					color: #fff;
+					float: left;
+					text-transform: uppercase;
+					width: 45px;
+					height: 45px;
+					font-size: large;
+					text-align: center;
+				}
+				p:last-of-type {
+					font-size: smaller;
+					margin: 0 0 30px 0;
+				}
 			}
 		}
 	}

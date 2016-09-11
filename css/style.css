@@ -130,35 +130,36 @@ banner {
         text-transform: capitalize;
         font-size: 20px;
         padding-right: 5px; }
-      banner > div:first-child content ul {
-        padding: 0; }
-        banner > div:first-child content ul li {
-          display: inline-block;
-          width: 40px;
-          height: 40px;
-          background-color: #fff; }
-          banner > div:first-child content ul li:hover {
-            cursor: pointer; }
-          banner > div:first-child content ul li span {
-            display: block;
-            width: 40px;
-            height: 40px; }
-          banner > div:first-child content ul li:first-child span {
-            background: url("../images/eye-icon-off.png") 12px 14px scroll no-repeat; }
-            banner > div:first-child content ul li:first-child span:hover {
-              background-image: url("../images/eye-icon-on.png"); }
-          banner > div:first-child content ul li:nth-child(2) span {
-            background: url("../images/wishlist-icon-off.png") 11px 12px scroll no-repeat; }
-            banner > div:first-child content ul li:nth-child(2) span:hover {
-              background-image: url("../images/wishlist-icon-on.png"); }
-          banner > div:first-child content ul li:nth-child(3) span {
-            background: url("../images/share-icon-off.png") 12px 13px scroll no-repeat; }
-            banner > div:first-child content ul li:nth-child(3) span:hover {
-              background-image: url("../images/share-icon-on.png"); }
-          banner > div:first-child content ul li:last-child span {
-            background: url("../images/buy-icon-off.png") 10px 12px scroll no-repeat; }
-            banner > div:first-child content ul li:last-child span:hover {
-              background-image: url("../images/buy-icon-on.png"); }
+
+ul.links {
+  padding: 0; }
+  ul.links li {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #fff; }
+    ul.links li:hover {
+      cursor: pointer; }
+    ul.links li span {
+      display: block;
+      width: 40px;
+      height: 40px; }
+    ul.links li:first-child span {
+      background: url("../images/eye-icon-off.png") 12px 14px scroll no-repeat; }
+      ul.links li:first-child span:hover {
+        background-image: url("../images/eye-icon-on.png"); }
+    ul.links li:nth-child(2) span {
+      background: url("../images/wishlist-icon-off.png") 11px 12px scroll no-repeat; }
+      ul.links li:nth-child(2) span:hover {
+        background-image: url("../images/wishlist-icon-on.png"); }
+    ul.links li:nth-child(3) span {
+      background: url("../images/share-icon-off.png") 12px 13px scroll no-repeat; }
+      ul.links li:nth-child(3) span:hover {
+        background-image: url("../images/share-icon-on.png"); }
+    ul.links li:last-child span {
+      background: url("../images/buy-icon-off.png") 10px 12px scroll no-repeat; }
+      ul.links li:last-child span:hover {
+        background-image: url("../images/buy-icon-on.png"); }
 
 controllers {
   background-color: #2e2e2e;
@@ -231,6 +232,7 @@ specials {
     margin: 0 auto;
     height: 230px; }
     specials .specials div {
+      cursor: pointer;
       max-height: 180px;
       max-width: 300px;
       display: inline-block;
@@ -253,5 +255,152 @@ specials {
         background-color: rgba(0, 0, 0, 0.8);
         text-transform: uppercase;
         color: #fff; }
+
+arrivals {
+  background-color: #ebe7df;
+  height: 1000px;
+  display: block;
+  padding-top: 25px; }
+  arrivals .arrivals {
+    width: 960px;
+    min-width: 960px;
+    margin: 0 auto;
+    height: 230px; }
+    arrivals .arrivals h2 {
+      font-family: Aller;
+      font-weight: normal;
+      text-transform: capitalize;
+      margin: 0;
+      display: inline-block;
+      width: 90%;
+      padding-bottom: 10px; }
+    arrivals .arrivals a {
+      font-family: Aller;
+      float: right;
+      color: #bcb5a7;
+      border: 1px #bcb5a7 solid;
+      text-transform: none;
+      text-decoration: none;
+      padding: 6px; }
+      arrivals .arrivals a:hover {
+        color: #57c5a0;
+        border-color: #57c5a0; }
+    arrivals .arrivals .item {
+      position: relative;
+      display: inline-block;
+      width: 300px;
+      height: 270px;
+      background-color: #fff;
+      margin: 15px 0 35px 25px; }
+      arrivals .arrivals .item:first-of-type {
+        background: url("../images/shoe1.jpg") 0 0 scroll no-repeat; }
+      arrivals .arrivals .item:nth-of-type(2) {
+        background: url("../images/shoe2.jpg") 0 0 scroll no-repeat; }
+      arrivals .arrivals .item:nth-of-type(3) {
+        background: url("../images/shoe3.jpg") 0 0 scroll no-repeat; }
+      arrivals .arrivals .item:nth-of-type(4) {
+        background: url("../images/shoe4.jpg") 0 0 scroll no-repeat; }
+      arrivals .arrivals .item:nth-of-type(5) {
+        background: url("../images/shoe5.jpg") 0 0 scroll no-repeat; }
+      arrivals .arrivals .item:nth-of-type(6) {
+        background: url("../images/shoe6.jpg") 0 0 scroll no-repeat; }
+      arrivals .arrivals .item:first-of-type, arrivals .arrivals .item:nth-of-type(4) {
+        margin-left: 0; }
+      arrivals .arrivals .item #on-sale, arrivals .arrivals .item #out-of-stock {
+        position: absolute;
+        display: block;
+        width: 65px;
+        height: 45px;
+        background-color: #000;
+        color: #fff;
+        top: 0;
+        right: 15px;
+        margin: 0;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: Aller;
+        font-size: 13px;
+        padding-top: 20px;
+        display: none; }
+      arrivals .arrivals .item #out-of-stock {
+        background-color: #f27e4b; }
+      arrivals .arrivals .item:nth-of-type(2) #on-sale, arrivals .arrivals .item:nth-of-type(6) #out-of-stock {
+        display: block; }
+      arrivals .arrivals .item div {
+        position: absolute;
+        display: block;
+        height: 50px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-top: 1px #ccc solid;
+        background-color: #fff; }
+        arrivals .arrivals .item div p:first-child {
+          display: block;
+          width: 70px;
+          height: 45px;
+          background-color: #57c5a0;
+          color: #fff;
+          margin: -20px 0 0 12px;
+          text-align: center;
+          float: left;
+          font-family: Aller;
+          padding-top: 25px; }
+        arrivals .arrivals .item div p:last-of-type {
+          float: left;
+          margin: 0;
+          font-family: Aller;
+          font-weight: normal;
+          font-size: x-large;
+          padding: 10px 0 0 10px;
+          cursor: pointer;
+          display: block;
+          width: 208px;
+          height: 40px; }
+        arrivals .arrivals .item div .links {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          margin: 0;
+          height: 40px;
+          width: 181px;
+          display: none;
+          background-color: #fff;
+          cursor: pointer;
+          overflow: hidden;
+          padding: 5px 18px; }
+    arrivals .arrivals #free-shipping, arrivals .arrivals #testimonials, arrivals .arrivals #blog-news {
+      padding: 17px;
+      display: inline-block;
+      width: 200px;
+      min-height: 200px;
+      margin: 0 16px 0 0;
+      background-color: #dfdbd4; }
+      arrivals .arrivals #free-shipping h3, arrivals .arrivals #testimonials h3, arrivals .arrivals #blog-news h3 {
+        text-transform: uppercase;
+        font-family: Aller;
+        margin-top: 0; }
+      arrivals .arrivals #free-shipping p, arrivals .arrivals #testimonials p, arrivals .arrivals #blog-news p {
+        font-size: small; }
+    arrivals .arrivals #blog-news {
+      width: 417px;
+      margin: 0 0 5px 0; }
+      arrivals .arrivals #blog-news .blog-post h4 {
+        margin: 0; }
+      arrivals .arrivals #blog-news .blog-post p:first-of-type {
+        margin: 0 10px 12px 0;
+        display: block;
+        background-color: #57c5a0;
+        font-family: Aller;
+        color: #fff;
+        float: left;
+        text-transform: uppercase;
+        width: 45px;
+        height: 45px;
+        font-size: large;
+        text-align: center; }
+      arrivals .arrivals #blog-news .blog-post p:last-of-type {
+        font-size: smaller;
+        margin: 0 0 30px 0; }
 
 /*# sourceMappingURL=style.css.map */
